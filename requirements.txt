@@ -1,0 +1,7 @@
+pypdf
+scikit-learn
+numpy
+anthropic
+google-generativeai
+python-dotenv
+groq
