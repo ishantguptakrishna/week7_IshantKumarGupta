@@ -1,0 +1,18 @@
+Retrieval-Augmented Generation (RAG) Notes
+
+RAG is a technique that combines information retrieval with text generation.
+Instead of relying purely on what a language model memorized during training,
+RAG retrieves relevant passages from an external knowledge source at query time
+and feeds them to the model as context.
+
+The main benefits of RAG are:
+1. Reduced hallucination, since answers are grounded in real retrieved text.
+2. Ability to answer questions about private or recent data the model never saw during training.
+3. Easier updates: you can add new documents without retraining the model.
+
+A typical RAG pipeline has two phases: an offline indexing phase (chunk documents,
+embed them, store in a vector database) and an online query phase (embed the
+question, retrieve similar chunks, generate an answer using those chunks as context).
+
+Common vector databases include FAISS, Chroma, Pinecone, and Weaviate.
+Common embedding models include OpenAI embeddings, Sentence-BERT, and Cohere embeddings.
